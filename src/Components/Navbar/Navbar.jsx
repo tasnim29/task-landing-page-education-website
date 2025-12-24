@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { FiSearch } from "react-icons/fi";
 import { NavLinks } from "../../Constants/Navlinks";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 
 const Navbar = ({ openNav }) => {
   const [navBg, setNavBg] = useState(false);
@@ -34,13 +34,12 @@ const Navbar = ({ openNav }) => {
         <div className="hidden lg:flex items-center space-x-8">
           {/* Nav Links */}
           {NavLinks.map((navLink) => (
-            <a
-              key={navLink.id}
-              href={navLink.url}
+            <Link
+              to={navLink.url}
               className="nav_link text-white text-lg font-medium"
             >
               {navLink.label}
-            </a>
+            </Link>
           ))}
 
           {/* Search Bar */}
