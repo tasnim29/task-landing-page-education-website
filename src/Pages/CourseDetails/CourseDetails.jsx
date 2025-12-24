@@ -22,7 +22,7 @@ const CourseDetails = () => {
             className={`px-6 py-2 rounded-lg font-semibold transition cursor-pointer
               ${
                 tab === activeTab
-                  ? "bg-pink-700 text-white"
+                  ? "bg-pink-700 text-white hover:bg-pink-500"
                   : "bg-gray-200 text-gray-700 hover:bg-pink-500 hover:text-white"
               }`}
           >
@@ -30,12 +30,34 @@ const CourseDetails = () => {
           </button>
         ))}
       </div>
-      <div className="text-center text-black">
-        {activeTab === "Curriculum" ? (
-          <Curriculam course={course} />
-        ) : (
-          `${activeTab} tab content `
-        )}
+
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+        <div className="md:col-span-3">
+          <div className="bg-white rounded-xl shadow-sm p-6 space-y-4 ">
+            <div>
+              <p className="text-sm text-gray-500">Course Price</p>
+              <p className="text-3xl font-bold text-gray-900">
+                ৳{course.price}
+              </p>
+            </div>
+
+            <button className="w-full bg-pink-700 hover:bg-pink-500 text-white font-semibold py-3 rounded-lg transition">
+              Buy Now
+            </button>
+
+            <button className="w-full border border-pink-700 text-pink-700 hover:bg-pink-50 font-semibold py-3 rounded-lg transition">
+              Add to Wishlist
+            </button>
+          </div>
+        </div>
+
+        <div className="col-span-9">
+          {activeTab === "Curriculum" ? (
+            <Curriculam course={course} />
+          ) : (
+            `${activeTab} tab content `
+          )}
+        </div>
       </div>
     </div>
   );
