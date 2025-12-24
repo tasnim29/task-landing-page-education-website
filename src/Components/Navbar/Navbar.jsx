@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { FiSearch } from "react-icons/fi";
 import { NavLinks } from "../../Constants/Navlinks";
+import { useLocation } from "react-router";
 
 const Navbar = ({ openNav }) => {
   const [navBg, setNavBg] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => setNavBg(window.scrollY >= 90);
     window.addEventListener("scroll", handler);
+
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
@@ -18,7 +21,9 @@ const Navbar = ({ openNav }) => {
         ${
           navBg
             ? "top-12 w-[80%] h-16 bg-black/60 backdrop-blur-md rounded-full shadow-2xl z-20"
-            : "top-0 w-full h-[12vh] z-10 "
+            : `top-0 w-full h-[12vh] z-10 ${
+                location.pathname !== "/" ? "bg-black" : ""
+              }`
         }`}
     >
       <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">

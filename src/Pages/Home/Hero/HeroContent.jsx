@@ -63,36 +63,6 @@ const HeroContent = () => {
           Join Now
         </button>
       </motion.div>
-
-      <motion.div
-        className="flex items-center flex-wrap space-x-16 mt-8"
-        initial="hidden"
-        animate="visible"
-        variants={variants}
-        transition={{ delay: 1.1, duration: 1 }}
-      >
-        <div>
-          <p className="flex items-center lg:text-2xl text-base text-white font-bold">
-            260+
-          </p>
-          <p className="w-[100px h-0.75 bg-yellow-600 mt-2 mb-2 rounded-lg"></p>
-          <p className="md:text-lg text-sm text-white opacity-70">Tutors</p>
-        </div>
-        <div>
-          <p className="flex items-center lg:text-2xl text-base text-white font-bold">
-            2260+
-          </p>
-          <p className="w-[100px h-0.75 bg-blue-600 mt-2 mb-2 rounded-lg"></p>
-          <p className="md:text-lg text-sm text-white opacity-70">Students</p>
-        </div>
-        <div>
-          <p className="flex items-center lg:text-2xl text-base text-white font-bold">
-            60+
-          </p>
-          <p className="w-[100px h-0.75 bg-pink-600 mt-2 mb-2 rounded-lg"></p>
-          <p className="md:text-lg text-sm text-white opacity-70">Courses</p>
-        </div>
-      </motion.div>
     </div>
   );
 };

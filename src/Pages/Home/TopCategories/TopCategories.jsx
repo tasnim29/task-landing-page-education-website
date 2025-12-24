@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { categories } from "../../../Constants/Categories";
 
 const TopCategories = () => {
+  const [showAll, setShowAll] = useState(false);
+  const categoriesToShow = showAll ? categories : categories.slice(0, 4);
   return (
     <section className="w-full py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
@@ -8,13 +11,16 @@ const TopCategories = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             Top Categories
           </h2>
-          <button className="text-pink-600 font-semibold hover:underline">
-            All Categories
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-pink-600 font-semibold hover:underline"
+          >
+            {showAll ? "Show less" : "Show All"}
           </button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {categories.map((category) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {categoriesToShow.map((category) => (
             <div
               key={category.name}
               className="bg-white shadow-md rounded-xl p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"

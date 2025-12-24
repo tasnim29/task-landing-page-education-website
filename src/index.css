@@ -9,6 +9,20 @@ body {
   overflow-x: hidden;
 }
 
+@layer utilities {
+  /* optional if you want to reuse masked images */
+  .masked-img {
+    -webkit-mask-image: url("/images/mask-img.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 70%;
+    mask-image: url("/images/mask-img.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+  }
+}
+
 /* Navigation */
 .nav-ul {
   @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
