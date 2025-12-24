@@ -1,6 +1,6 @@
-import React from "react";
 import { CgClose } from "react-icons/cg";
-import { NavLinks } from "../../../Constants/Navlinks";
+import { NavLinks } from "../../Constants/Navlinks";
+import { Link } from "react-router";
 
 const MobileNavbar = ({ showNav, closeNav }) => {
   return (
@@ -19,13 +19,13 @@ const MobileNavbar = ({ showNav, closeNav }) => {
       >
         {NavLinks.map((navLink) => {
           return (
-            <a
+            <Link
               key={navLink.id}
               className="nav_link ml-12 text-3xl!  pb-2 "
               to={navLink.url}
             >
               {navLink.label}
-            </a>
+            </Link>
           );
         })}
         {/* close button */}

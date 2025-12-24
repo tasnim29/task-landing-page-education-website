@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { FiSearch } from "react-icons/fi";
-import { NavLinks } from "../../../Constants/Navlinks";
+import { NavLinks } from "../../Constants/Navlinks";
 
 const Navbar = ({ openNav }) => {
   const [navBg, setNavBg] = useState(false);

@@ -11,7 +11,7 @@ const HeroContent = () => {
   };
 
   return (
-    <div>
+    <div className="mt-20 md:pt-0">
       <motion.h1
         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold md:leading-12 text-white"
         initial="hidden"
@@ -19,7 +19,7 @@ const HeroContent = () => {
         variants={variants}
         transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
       >
-        Build{" "}
+        Build <br />
         <motion.span
           className="text-6xl"
           initial="hidden"
@@ -29,7 +29,7 @@ const HeroContent = () => {
         >
           <FlipWords
             words={words}
-            className="font-bold text-7xl text-pink-700"
+            className="font-bold text-5xl md:text-7xl text-pink-700"
           />
         </motion.span>
         <br />
@@ -64,7 +64,13 @@ const HeroContent = () => {
         </button>
       </motion.div>
 
-      <div className="flex items-center flex-wrap space-x-16 mt-8">
+      <motion.div
+        className="flex items-center flex-wrap space-x-16 mt-8"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ delay: 1.1, duration: 1 }}
+      >
         <div>
           <p className="flex items-center lg:text-2xl text-base text-white font-bold">
             260+
@@ -86,7 +92,7 @@ const HeroContent = () => {
           <p className="w-[100px h-0.75 bg-pink-600 mt-2 mb-2 rounded-lg"></p>
           <p className="md:text-lg text-sm text-white opacity-70">Courses</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,0 +1,38 @@
+export const coursesList = [
+  {
+    title: "Complete Web Development Course",
+    category: "Development",
+    instructor: "John Doe",
+    duration: "12h 30m",
+    students: 1200,
+    price: "$49",
+    image: "/images/course1.jpeg",
+  },
+  {
+    title: "Mastering Photoshop for Beginners",
+    category: "Art & Design",
+    instructor: "Jane Smith",
+    duration: "8h 15m",
+    students: 980,
+    price: "Free",
+    image: "/images/course2.jpg",
+  },
+  {
+    title: "Digital Marketing Essentials intermediate",
+    category: "Business",
+    instructor: "Alice Johnson",
+    duration: "10h 45m",
+    students: 650,
+    price: "$39",
+    image: "/images/course3.jpg",
+  },
+  {
+    title: "Freelance online for beginners",
+    category: "Tech",
+    instructor: "Michael Lee",
+    duration: "6h 20m",
+    students: 430,
+    price: "$29",
+    image: "/images/course4.jpg",
+  },
+];
