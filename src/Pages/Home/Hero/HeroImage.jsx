@@ -1,4 +1,3 @@
-import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "motion/react";
 
@@ -16,7 +15,11 @@ const HeroImage = () => {
         variants={variants}
         transition={{ delay: 1.1, duration: 1 }}
       >
-        <img className="w-[800] h-[600]" src="/images/hero.png" alt="" />
+        <img
+          className="w-full max-w-[400px] md:max-w-[600px] mx-auto"
+          src="/images/hero.png"
+          alt=""
+        />
       </motion.div>
     </Tilt>
   );

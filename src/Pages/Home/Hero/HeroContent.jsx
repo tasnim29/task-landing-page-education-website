@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { motion } from "motion/react";
 import { FlipWords } from "../../../Constants/FlipWords";
 
@@ -11,7 +9,7 @@ const HeroContent = () => {
   };
 
   return (
-    <div className="mt-20 md:pt-0">
+    <div className="pt-12 sm:pt-14 md:pt-0">
       <motion.h1
         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold md:leading-12 text-white"
         initial="hidden"
@@ -29,7 +27,7 @@ const HeroContent = () => {
         >
           <FlipWords
             words={words}
-            className="font-bold text-5xl md:text-7xl text-pink-700"
+            className="font-bold text-4xl sm:text-5xl md:text-7xl text-pink-700"
           />
         </motion.span>
         <br />

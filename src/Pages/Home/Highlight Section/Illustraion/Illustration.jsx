@@ -51,11 +51,11 @@ const Illustration = () => {
           </ul>
 
           {/* Center Image */}
-          <div className="relative w-full md:w-2/5 h-[50vh] md:h-[70vh]">
+          <div className="relative w-full md:w-2/5 h-[50vh] md:h-[70vh] overflow-hidden ">
             <img
               src="/images/under-img.avif"
               alt="mask illustration"
-              className="w-full h-full object-cover rounded-3xl masked-img"
+              className="w-full h-full object-cover rounded-3xl masked-img overflow-hidden"
               style={{
                 WebkitMaskImage: 'url("/images/mask-img.png")',
                 WebkitMaskRepeat: "no-repeat",
