@@ -14,8 +14,7 @@ const Courses = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-        <div className="col-span-3 bg-white rounded-xl shadow-md p-5 space-y-6 h-fit">
-          {/* Filter Section */}
+        <div className="col-span-1 md:col-span-3 bg-white rounded-xl shadow-md p-5 space-y-6 h-fit w-full">
           <div>
             <h3 className="text-lg font-semibold mb-3">Filter Courses</h3>
 
@@ -28,7 +27,7 @@ const Courses = () => {
             </select>
           </div>
 
-          <div>
+          <div className="">
             <h3 className="text-lg font-semibold mb-3">View Mode</h3>
 
             <div className="flex gap-3">
@@ -49,7 +48,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <div className="col-span-9">
+        <div className="col-span-1 md:col-span-9">
           {view === "grid" ? (
             <CourseGridView courses={AllCoursesList} />
           ) : (
